@@ -70,7 +70,7 @@ regular resources:
 ![gold_texture](http://cdn01.ib.infobae.com/adjuntos/162/imagenes/003/693/0003693935.jpg)  
 ![copper_texture](http://www.regencymint.com/wp-content/uploads/2011/08/Copper-Blanks-Burnished1.jpg)
 ![diamond_texture](https://www.colourbox.de/preview/2766647-white-crystals-on-a-black-background.jpg)
-![clay_texture](http://www.soundtecwalls.com/images/stories/textures/brick-texture.png)
+![clay_texture](https://github.com/joseraf86/market_forces/blob/master/img/clay_texture-64x64.jpg)
 ![marble_texture](http://aoccstone.com/wp-content/uploads/2013/06/marble_gioia_extra_thumb.jpg)
 
 energetic resources: 
