@@ -50,35 +50,35 @@ resources -> production -> trading
  * A player may level up a facility investing an extra amount of the maintenance resource
  * Players may chose at which level a facility will work on
  * Players may not invest in a facility maintenence but when the energetic resource is depleted the facility will stop its operation and will decrease 1 level
- 
-** Example:**
-Initial State
- 
-Some player have 1 _spot_ with the following resource distribution potentials:
-regular resources:
 
-* timber brownish timber-like texture
-* iron   solid gray
-* gold   glowing dark yellow
-* copper 
-* diamond white/traslucid
-* clay 
-* marble gray/vlack marble like patterns
-  
-![timber_texture](https://github.com/joseraf86/market_forces/blob/master/img/timber_texture-64x64.jpg)
-![iron_texture](https://github.com/joseraf86/market_forces/blob/master/img/iron_texture-64x64.jpg)
-![gold_texture](https://github.com/joseraf86/market_forces/blob/master/img/gold_texture-64x64.jpg)  
-![copper_texture](https://github.com/joseraf86/market_forces/blob/master/img/copper_texture-64x64.jpg)
-![diamond_texture](https://github.com/joseraf86/market_forces/blob/master/img/diamond_texture-64x64.jpg)
-![clay_texture](https://github.com/joseraf86/market_forces/blob/master/img/clay_texture-64x64.jpg)
-![marble_texture](https://github.com/joseraf86/market_forces/blob/master/img/marble_texture-64x64.jpg)
+---
+ 
+**Example:** Initial State
+ 
+Given a player with 1 _spot_ with the following resource distribution potentials:
 
-energetic resources: 
-* coal
-* oil
-* gas
-* water
-* uranium
+**Resources:**
+
+| regular  | potential | texture |
+|----------|:---------:|---------|
+| timber   |    500    |![timber_texture](https://github.com/joseraf86/market_forces/blob/master/img/timber_texture-64x64.jpg?raw=true) |
+| iron     |    300    |![iron_texture](https://github.com/joseraf86/market_forces/blob/master/img/iron_texture-64x64.jpg?raw=true)|
+| gold     |    5      | ![gold_texture](https://github.com/joseraf86/market_forces/blob/master/img/gold_texture-64x64.jpg?raw=true)|
+| copper   |    300    |![copper_texture](https://github.com/joseraf86/market_forces/blob/master/img/copper_texture-64x64.jpg?raw=true)|
+| diamond  |    5      |![diamond_texture](https://github.com/joseraf86/market_forces/blob/master/img/diamond_texture-64x64.jpg?raw=true)|
+| clay     |    600    |![clay_texture](https://github.com/joseraf86/market_forces/blob/master/img/clay_texture-64x64.jpg?raw=true)|
+| marble   |    30     |![marble_texture](https://github.com/joseraf86/market_forces/blob/master/img/marble_texture-64x64.jpg?raw=true)|
+
+.
+
+|energetic | potential | texture |
+|----------|:---------:|---------|
+| coal     |    500    |![coal_texture](https://github.com/joseraf86/market_forces/blob/master/img/coal_texture-64x64.jpg?raw=true) |
+| oil      |    300    |![oil_texture](https://github.com/joseraf86/market_forces/blob/master/img/oil_texture-64x64.jpg?raw=true)|
+| gas     |    5       |![gas_texture](https://github.com/joseraf86/market_forces/blob/master/img/gas_texture-64x64.jpg?raw=true)|
+| water   |    300     |![water_texture](https://github.com/joseraf86/market_forces/blob/master/img/water_texture-64x64.jpg?raw=true)|
+| uranium  |    5      |![uranium_texture](https://github.com/joseraf86/market_forces/blob/master/img/uranium_texture-64x64.jpg?raw=true)|
+
  
  Input = Energy + Maintenance resource
  Energy: Coal (energetic resource)
