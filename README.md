@@ -55,7 +55,7 @@ resources -> production -> trading
  
 **Example:** Initial State
  
-Some player have 1 _spot_ with the following resource distribution potentials:
+Given a player with 1 _spot_ with the following resource distribution potentials:
 
 **Resources:**
 
