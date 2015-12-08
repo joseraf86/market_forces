@@ -46,6 +46,9 @@ resources -> production -> trading
  * A player may level up a facility investing an extra amount of the maintenance resource
  * Players may chose at which level a facility will work on
  * Players may not invest in a facility maintenence but when the energetic resource is depleted the facility will stop its operation and will decrease 1 level
+ * If a plyer only have 1 energetic-resource-pruducing facility and that facility is in level 1 it should produce that energetic resource without energetic resource inout nor maintenance
+ * At level 1 all facilities don't requery maintenance resource
+ * If a player only have 1 regular-resource-producing facility and that facility is in level 1 it should produce that regular resource without maintenance resource but it still need the energetic resource to operate
 
 ---
  
@@ -75,13 +78,6 @@ Given a player with 1 _spot_ with the following resource distribution potentials
 | water    |    300    |![water_texture](https://github.com/joseraf86/market_forces/blob/master/img/water_texture-64x64.jpg?raw=true)|
 | uranium  |    5      |![uranium_texture](https://github.com/joseraf86/market_forces/blob/master/img/uranium_texture-64x64.jpg?raw=true)|
  
-The player can build only its first facility for free. The player chooses to build a gold mine first. At level 1 a
-facility requires no maintenance resource, nonetheless the player have not any energetic resource so gold production cannot start off. The player have two choices then:
-
-* Print some money to exchange its currency for the desired resource (check currency)
-* Unbuild the only facility it has built so far and build another facility for free. This new facility should exploit some energetic resource, otherwise any initial facility production cannot occur
-
-The player decides to unbuild its only facility and build other one, this time tied to coal. This process goes as follows:
 
 The player can build only its first facility for free. The player chooses to build a gold mine first. At level 1 a
 facility requires no maintenance resource, nonetheless the player have not any energetic resource so gold production cannot start off. The player have two choices then:
@@ -89,57 +85,23 @@ facility requires no maintenance resource, nonetheless the player have not any e
 * Print some money to give its currency in exchange of the desired resource (see currency)
 * Unbuild the only facility it has built so far and build another facility for free. This new facility should exploit some energetic resource, otherwise any initial facility production cannot occur
 
-The player decides to unbuild its only facility and build other one, this time tied to coal. This process goes as follows:
+The player decides to unbuild his only facility and then builds another one, this time tied to coal.
+This process goes as follows:
 
-facility level: 1
-exploited resource: coal
-Maintenance resorce: wood
+| facility   | value          | free |
+|:----------:|:--------------:|:----:|
+|level       |1               |      |
+|exploited   |coal            |      |
+|maintenance |timber          |x     |
+|energetic   |coal            |x     |
+|initial cost|ytbd\*          |x     |
+|working rate|0.25 coal/minute|      |
+\* ytbd: yet to be defined
 
-The players decides to build a timber-operated facility that exploits coal. Since the facility is in its first level it requires no maintenance at all. Therefore the player eventually will get alll the energetic reosource needed to ignite the production process.
-
-
-
-
-so after some time the player will have some amounts of gold stored within its
-treasury.
-
-
- ```
- Input = Energy + Maintenance resource
- Energy: Coal (energetic resource)
- Maintenance resource: wood (regular resource)
- ```
-
- **Initial escenario**
- 
- _Spot_:  1K gold (at least)
- initial facility cost?
- facility level 1
- Energy + no maintenance -> facility -> 
- 60 coal -> gold facility 0,25 gold/minute
- 58 coal -> 0,5 gold
- 56 coal -> 1 gold
- 0  coal -> 15 gold
-
-| facility level | exploited resource |maintenance resource| energetic resource |
-|----------------|--------------------|:------------------:|:------------------:|
-| 1              | coal               |N/A                 |N/A                 |
-
-The player decides to build a timber-producing facility that will exploit coal. Since the facility is in its first level it requires no maintenance at all. Furthermore, the first energetic resource facility must operate with no energetic resource at level 1 also, so that the boot production process can begin.
+The player decides to build a timber-based coal-powered facility that will exploit coal. Since the facility is in its first level it requires no maintenance at all. Furthermore, the facility must operate with no energetic resource at level 1 so that the boot production process can begin (this is the only player's facility so far).
 
 The timber-producing facility will begin to exploit timber at its lowest **working rate** (yet to be defined),
 so after some time the player will end up with some timber stored within its **treasury**.
-
-Situation:
- 
-_Spot_: 500 timber
-Facility level: 1
-Facility exploited resource: coal
-Facility maintenance resource: N/A
-Facility energetic resource: N/A
-Initial facility cost: N/A
-Facility working rate: 0,25 coal/minute (yet to be defined)
-
 
 **Production process:**
 
@@ -151,41 +113,34 @@ Facility working rate: 0,25 coal/minute (yet to be defined)
 |58        |         14.75     |                    |                      |
 |59        |         15        |                    |                      |
 
-Now that the pleyer has some coal sotored he can choose to
+Now that the player has some coal stored in his **treasury** he can choose to
 
 * Trade the resource gathered
 * Invest the resource gathered
 * Save up the resource gathered
 
-The player decides to invest in a gold mine but he will need some timber to build it up. He chose timber instead of other regular resources because timber has a higher resource potential in his _spot_. Since the player already has a coal-producing facility his second facility is not for free. He will need to invest some timber to build a timber-based gold-producing facility if he choooses so. He can of course depend on other regular material. What's more, he will need to choose which energetic resource its timber-based facility will depend on as well.
+The player decides to invest in a gold mine but he will need some timber to build it up. He choses timber instead of other regular resources because timber has a higher resource potential in his _spot_. Since the player already has a coal-producing facility his second facility cannot be built for free. He will need to invest some timber to build a timber-based coal-powered gold-producing facility if he chooses so. He could, of course, make the facility depend on other regular resource besides timber. What's more, he must choose which energetic resource its timber-based facility will depend on as well (coal this time).
 
-Player's decision goes as follows:
-
-Facility level: 1
-Facility exploited resource: gold
-Facility maintenance resource: timber
-Facility energetic resource: coal
-Initial facility cost: 10 timber
-Facility working rate: 0,025 gold/minute (yet to be defined)
- 
-Player has no timber, so he can choose to:
+Yet the player has no timber, so he can choose to:
 
 1. Trade some of his coal in exchange of 10 timber
 2. Print some money and exchange his currency for 10 timber
-3. Unbuild his coal-producing facility to have a free coal-based timber-producing facility
+3. Unbuild his coal-producing facility to have a free coal-powered timber-producing facility
 
-Though the third option do not depend on others players, in general is not wise to do so because you can only have one of these _starter_ facilities at a time, and it will operate for free just in its first level at its **minimum working rate**.
-Nevertheless, for the sake of simplicity, the player will chose the third option.
+Though the third option do not depend on others players, in general is not wise to do so because you can only have one of these _starter_ facilities at a time. It will operate for free just if no other facilities are built when you are building it. Also, it will operate for free just in its first level at its **minimum working rate**. Nevertheless, for the sake of example simplicity, the player will choose the third option.
 
-The player choses to unbuild his coal-producing facility in order to build a timber-producing facility. Currently the player has 15 coal in his **treasury**. He decides to produce timber has follows:
+The player chooses to unbuild his coal-producing facility in order to build a timber-producing facility. Currently the player has 15 coal in his **treasury**. The player decides to produce timber as follows:
 
-Facility level: 1
-Facility exploited resource: timber
-Facility maintenance resource: N/A
-Facility energetic resource: coal
-Initial facility cost N/A
-Facility working rate: 0,5 timber/minute
+| facility   | value           | free |
+|:----------:|:---------------:|:----:|
+|level       |1                |      |
+|exploited   |timber           |      |
+|maintenance |iron             |x     |
+|energetic   |coal             |x     |
+|initial cost|ytbd\*           |x     |
+|working rate|0.5 tomber/minute|      |
 
+**Timber production** 
 | minute   | exploited resource | energetic resource | maintenance resource|
 |----------|--------------------|:------------------:|:--------------------:
 |0         |0.5                 |N/A                 |N/A
@@ -196,32 +151,66 @@ Facility working rate: 0,5 timber/minute
 |59        |30                  |                    |
 
 
-Now the player has 30 timber and 15 coal. The player decides to build his gold mine:
+Now the player has 30 timber and 15 coal in his **treasury**.
+The player decides to build his gold mine thereafter:
 
-Facility level: 1
-Facility exploited resource: gold
-Facility mainteinance resource: timber
-Facility energetic resource coal
-Initial facility cost: 10 timber
-Facility working rate: 0,025 gold/minute
-Facility consuming rate: 0,20 coal/minute
+| facility     | value             | free |
+|:------------:|:-----------------:|:----:|
+|level         |1                  |      |
+|exploited     |gold               |      |
+|maintenance   |timber             |      |
+|energetic     |coal               |      |
+|initial cost  |10 timber          |      |
+|working rate  |0.025 gold/minute  |      |
+|consuming rate|0.20 coal/minute   |      |
+
+**Gold production**
 
 | minute   | exploited resource | energetic resource |maintenance resource
 |:--------:|:------------------:|:------------------:|:------------------:
-| 0        |0.025               |14.8                |N/A
-| 1        |0.05                |14.6                |
-| ...      |...                 |...                 |
-| 57       |1.45                |2.6                 |
-| 58       |1.475               |2.4                 |
-| 59       |1.5                 |2.2                 |
+| 0        |0.025               |14.8                |N/A                |
+| 1        |0.05                |14.6                |                   |
+| ...      |...                 |...                 |                   |
+| 57       |1.45                |2.6                 |                   |
+| 58       |1.475               |2.4                 |                   |
+| 59       |1.5                 |2.2                 |                   |
 
 
 The player have now two facilities:
 
-* 1 coal-based timber-producing facility
-* 1 coal-powered timber-based gold-producing facility
+* 1 iron-based coal-powered timber-producing facility
+* 1 timber-based coal-powered gold-producing facility
  
-The player have now in his **tresury** 2.2 coal, 1.5 gold and 20 timber.
+**Player's treasury:**
+
+| resource | potential | 
+|----------|-----------|
+| coal     |2.2        |
+| gold     |1.5        |
+| timber   |20         |
+
+**Player's spot**
+
+| regular  | potential | texture |
+|----------|:---------:|---------|
+| timber   |    470    |![timber_texture](https://github.com/joseraf86/market_forces/blob/master/img/timber_texture-64x64.jpg?raw=true) |
+| iron     |    300    |![iron_texture](https://github.com/joseraf86/market_forces/blob/master/img/iron_texture-64x64.jpg?raw=true)|
+| gold     |    3.5     | ![gold_texture](https://github.com/joseraf86/market_forces/blob/master/img/gold_texture-64x64.jpg?raw=true)|
+| copper   |    300    |![copper_texture](https://github.com/joseraf86/market_forces/blob/master/img/copper_texture-64x64.jpg?raw=true)|
+| diamond  |    5      |![diamond_texture](https://github.com/joseraf86/market_forces/blob/master/img/diamond_texture-64x64.jpg?raw=true)|
+| clay     |    600    |![clay_texture](https://github.com/joseraf86/market_forces/blob/master/img/clay_texture-64x64.jpg?raw=true)|
+| marble   |    30     |![marble_texture](https://github.com/joseraf86/market_forces/blob/master/img/marble_texture-64x64.jpg?raw=true)|
+
+.
+
+|energetic | potential | texture |
+|----------|:---------:|---------|
+| coal     |    485    |![coal_texture](https://github.com/joseraf86/market_forces/blob/master/img/coal_texture-64x64.jpg?raw=true) |
+| oil      |    300    |![oil_texture](https://github.com/joseraf86/market_forces/blob/master/img/oil_texture-64x64.jpg?raw=true)|
+| gas      |    5      |![gas_texture](https://github.com/joseraf86/market_forces/blob/master/img/gas_texture-64x64.jpg?raw=true)|
+| water    |    300    |![water_texture](https://github.com/joseraf86/market_forces/blob/master/img/water_texture-64x64.jpg?raw=true)|
+| uranium  |    5      |![uranium_texture](https://github.com/joseraf86/market_forces/blob/master/img/uranium_texture-64x64.jpg?raw=true)|
+
 
 #### Leveling facilities up
 
