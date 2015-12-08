@@ -141,6 +141,7 @@ The player chooses to unbuild his coal-producing facility in order to build a ti
 |working rate|0.5 tomber/minute|      |
 
 **Timber production** 
+
 | minute   | exploited resource | energetic resource | maintenance resource|
 |----------|--------------------|:------------------:|:--------------------:
 |0         |0.5                 |N/A                 |N/A
