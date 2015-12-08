@@ -75,16 +75,39 @@ Given a player with 1 _spot_ with the following resource distribution potentials
 |----------|:---------:|---------|
 | coal     |    500    |![coal_texture](https://github.com/joseraf86/market_forces/blob/master/img/coal_texture-64x64.jpg?raw=true) |
 | oil      |    300    |![oil_texture](https://github.com/joseraf86/market_forces/blob/master/img/oil_texture-64x64.jpg?raw=true)|
-| gas     |    5       |![gas_texture](https://github.com/joseraf86/market_forces/blob/master/img/gas_texture-64x64.jpg?raw=true)|
-| water   |    300     |![water_texture](https://github.com/joseraf86/market_forces/blob/master/img/water_texture-64x64.jpg?raw=true)|
+| gas      |    5      |![gas_texture](https://github.com/joseraf86/market_forces/blob/master/img/gas_texture-64x64.jpg?raw=true)|
+| water    |    300    |![water_texture](https://github.com/joseraf86/market_forces/blob/master/img/water_texture-64x64.jpg?raw=true)|
 | uranium  |    5      |![uranium_texture](https://github.com/joseraf86/market_forces/blob/master/img/uranium_texture-64x64.jpg?raw=true)|
 
- 
+The player can build only its first facility for free. The player chooses to build a gold mine first. At level 1 a
+facility requires no maintenance resource, nonetheless the player have not any energetic resource so gold production cannot start off. The player have two choices then:
+
+* Print some money to give its currency in exchange of the desired resource (see currency)
+* Unbuild the only facility it has built so far and build another facility for free. This new facility should exploit some energetic resource, otherwise any initial facility production cannot occur
+
+The player decides to unbuild its only facility and build other one, this time tied to coal. This process goes as follows:
+
+facility level: 1
+exploited resource: coal
+Maintenance resorce: wood
+
+The players decides to build a timber-operated facility that exploits coal. Since the facility is in its first level it requires no maintenance at all. Therefore the player eventually will get alll the energetic reosource needed to ignite the production process.
+
+
+
+
+so after some time the player will have some amounts of gold stored within its
+treasury.
+
+
+ ```
  Input = Energy + Maintenance resource
  Energy: Coal (energetic resource)
  Maintenance resource: wood (regular resource)
+ ```
+
+ **Initial escenario**
  
- Initial escenario
  _Spot_:  1K gold (at least)
  initial facility cost?
  facility level 1
