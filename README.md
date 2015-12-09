@@ -233,21 +233,64 @@ Players may upgrade their facilities leveling them up.
 
 ### Trading
 
-Trading is one of the main aspect of the game. Trading takes place between any two players. In roder to do so a player must offer some resource in exchange of another resource. Just one type of resource can be traded in one transaction and they must be different. Players are completely free to agree the exchange rate. Players should always give something for something back. Players can't give away resources. Both players must agree before the transaction takes place. Transaction information will be publicly available so that other players can have a reference of the accepted exchange rate.
+Trading is one of the main aspect of the game. Trading takes place between any two players. In order to do so a player must offer some resource in exchange of another resource (barter). Just one type of resource can be traded in one transaction and they must be different. Players are completely free to agree the exchange rate. Players should always give something for something back. Players can't give away resources. Both players must agree before the transaction takes place.
+
+#### Distances
+
+* Player's can own several **spots** besides the one they get when they start the game. How much and how they can get more **spots** is yet to be defined
+* There are always distances defined between each two **spots** even if they belong to the same player or not
+* Players can exchange resources only if they have enough energy to transport them
+* The longer the distance the higher the amount of energy needed to move the exchanged resources
+* Player can move reources from one of his **spots** to another only if he has the energy required to do so
+* Energy is taken from player's energetic resources stored in his **treasury**
+
+#### Currency exchange
+
+* Players are free to print and name their own currency. How much money they can print is yet to be defined.
+* A player can give some of his money in exchange of resources
+* A player can accept resources in exchange of other players money
+* Players can exchange their currency directly
+* Money exchange requires no energy
+* The exchange rate must be agreed by the players performing the transaction
+* Transaction information involving players' currency will be made public so that other player can have some reference of the exchange rate.
+
+Players can use their own money to get resources from other players in advance and to save the energy implied when resources are moved from one **spot** to another, but both player should agree first on this and set the exchange rate. Nevertheless, it's wise that players accept their own currency as a legitimate exchange instrument. So, when a player asks another player for some resources giving in exchange the emiting-money player currency this player should accept the offer agreeing the transaction at some exchage rate. This way players currency gain trust. Later, the emiting-money player can use this instrument as a means to get resources in advance as he see fit. There must be a mechanism that can tell other players how trusted a currency is.
+
+* Player's own and foreign currency are stored in the **tresury**
+* Gathered resources and other players currency stored in **treasury** represent player's wealth
+* A player can choose if they want to make public this information so that other players can have an idea how stable his currency is or made just a partial display of the treasury information.
+Example
 
 
-#### Currency Exchange
+* The printed amount of money divided by the resources gathered can be see as a way to guess how worthy a currency unit is.
+* Players can decrease the amount of money the have printed but this money must be in thier **treasury** first
+* Hw much money a player has printed and how much own money a player have accepted information must be publicly available.
+* No player can print other player currency
+
+#### Renting **spots**
+
+* A player can let other players build facilities in their **spots** for a areed amount of the resource production exploited
+* A player can decide instead to let a user to exploit his resource untilreaching a resource exploited limit in exchange of currency or resources.
+
 
 ### Food for thought
 
-* What will motivate users to gather resources and level up facilities?
-* What's the game main goal: Sacale up in some sort of ladder. Complete collections (cards, creatures, treasures). Get the highest score, show off with fancy decorations or awards)
+* What will motivate users to gather resources and level up facilities since there's nothing but facilities to be build?
+* What's the overall game goal?. For instance in some games players climb up in some sort of ladder or leages, or they complete collections of objects (cards, creatures, treasures), they get the highest score, show off with fancy decorations or awards)
 * Will it "blend"?: be entertaining and "catchy": a Proof of Concept prototype must be built first.
 * What will players make them play again the game (notification mechanism, expiring times, logins instant rewards)
 * Overall game purpose, what will player will get from it?
 * Does it provide some sort of gamers feedback?
 * How the app can be sustainable? Monetization (Ads, in-game currency, accelration/power-ups, hybrid startegy?)
+* Game lifespan: Every game have a loifespan after a player fulfill its goal the game is over (Ladder top, all buildings finished, all levels cleared, etc). How can we make the game cyclic?
 
+```
+resources -> production -> trading -> expending? -> resorces (extra spots/rent?)
+```
+
+Once a player has gathered enough wealth he should be able to get more resources to exploit so that there are always new
+Player must have easy and quick access to other players' economic & production information so that they can made clever decision
+**Spots** resource potential should constantly change in a more or less predictible manner so that player can think of an strategy firsthand but no magic formula can be derived. 
 ---
 
 ### Vocabulary
