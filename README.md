@@ -218,21 +218,35 @@ The player have now two facilities:
 
 #### Leveling facilities up
 
-Players may upgrade thir facilities leveling them up.
+Players may upgrade their facilities leveling them up.
 
 * An upgraded facility increases its producing resource **production rate**
 * An upgraded facility increses its energetic resource **comsuption rate**
-* An upgraded facility increses its maintenance resource input
+* An upgraded facility increses its maintenance resource requirement
 * Facilities start off at level 1
 * All facilities may incresed their levels sequentially: 1,2,3...
-* Leveling facilities up do have a an incresing cost
-* Maintenance facility cost and level-up cost must be the same regular resource type
-* Players may choose which level they want their facility production level
-* Facilities can be downgraded so that players can get the maintenance resource back invested
-* In order to upgraded/downgrade a facility operation production process must be stopped
-* 
+* Leveling facilities up do have a an increasing cost
+* Maintenance facility level-up cost must match regular resource maintenance
+* Players may choose their facility production level
+* Facilities can be downgraded so that players can get its maintenance resource investement back to their **treasury**
+* In order to upgraded/downgrade a level the facility production process must not being performed
 
-### Currency Exchange
+### Trading
+
+Trading is one of the main aspect of the game. Trading takes place between any two players. In roder to do so a player must offer some resource in exchange of another resource. Just one type of resource can be traded in one transaction and they must be different. Players are completely free to agree the exchange rate. Players should always give something for something back. Players can't give away resources. Both players must agree before the transaction takes place. Transaction information will be publicly available so that other players can have a reference of the accepted exchange rate.
+
+
+#### Currency Exchange
+
+### Food for thought
+
+* What will motivate users to gather resources and level up facilities?
+* What's the game main goal: Sacale up in some sort of ladder. Complete collections (cards, creatures, treasures). Get the highest score, show off with fancy decorations or awards)
+* Will it "blend"?: be entertaining and "catchy": a Proof of Concept prototype must be built first.
+* What will players make them play again the game (notification mechanism, expiring times, logins instant rewards)
+* Overall game purpose, what will player will get from it?
+* Does it provide some sort of gamers feedback?
+* How the app can be sustainable? Monetization (Ads, in-game currency, accelration/power-ups, hybrid startegy?)
 
 ---
 
