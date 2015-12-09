@@ -241,8 +241,11 @@ Trading is one of the main aspect of the game. Trading takes place between any t
 * There are always distances defined between each two **spots** even if they belong to the same player or not
 * Players can exchange resources only if they have enough energy to transport them
 * The longer the distance the higher the amount of energy needed to move the exchanged resources
+* Farther distances implies higher amounts of time to deliver the exchanged resources
 * Player can move reources from one of his **spots** to another only if he has the energy required to do so
 * Energy is taken from player's energetic resources stored in his **treasury**
+* It is wise to trade with those player who have near **spots** to other players so the energy cost implied in resource movement can be diminished
+* It is wise to build player own facilities near so that they can exchage resources quickly with low energy cost and to build facilities at strategic **spots** near places that have the resource a player is lacking of, a player can in turn exchange this resource for the scarce resource in the near **spots**
 
 #### Currency exchange
 
@@ -254,12 +257,22 @@ Trading is one of the main aspect of the game. Trading takes place between any t
 * The exchange rate must be agreed by the players performing the transaction
 * Transaction information involving players' currency will be made public so that other player can have some reference of the exchange rate.
 
-Players can use their own money to get resources from other players in advance and to save the energy implied when resources are moved from one **spot** to another, but both player should agree first on this and set the exchange rate. Nevertheless, it's wise that players accept their own currency as a legitimate exchange instrument. So, when a player asks another player for some resources giving in exchange the emiting-money player currency this player should accept the offer agreeing the transaction at some exchage rate. This way players currency gain trust. Later, the emiting-money player can use this instrument as a means to get resources in advance as he see fit. There must be a mechanism that can tell other players how trusted a currency is.
+Players can use their own money to get resources from other players in advance and to save the energy implied when resources are moved from one **spot** to another, but both player should agree first on this and set the exchange rate. Nevertheless, it's wise that players accept their own currency as a legitimate exchange instrument. So, when a player asks another player for some resources giving in exchange the emiting-money player currency this player should accept the offer agreeing the transaction at some exchage rate. This way players currency gain trust. Later, the emiting-money player can use this instrument as a means to get resources in advance as he see fit. There must be a mechanism that can tell other players how trusted a currency is. Foreign currency can be think of as some sort of wealth if this currency is printed by a trusted player (someone who always accept their own currency as payment at a reasonable exchange rate and publish his **treasury** status regularly) because this amount of money represent potential access to other markets and its resources.
+
 
 * Player's own and foreign currency are stored in the **tresury**
-* Gathered resources and other players currency stored in **treasury** represent player's wealth
-* A player can choose if they want to make public this information so that other players can have an idea how stable his currency is or made just a partial display of the treasury information.
-Example
+* Gathered resources and other players currency stored in **treasury** can represent player's wealth
+* A player can choose if they want to make public **treasury** information so that other players can have an idea how stable his currency is or made just a partial display of the treasury information.
+* Potential resource access are another source of valuable information
+* Distances between **spots** idem
+* Distribution of resource availability in near located **spots**
+* Amount of money printed vs amount of money accepted
+* Amounto of currency widespread in the market
+* Exchage rates information
+* Amount of transactions done
+* Amount of owned facilities built in other players **spots** (industrial power) idem 
+* Players who excels managing their resources can become their own currency a reference in the market
+
 
 
 * The printed amount of money divided by the resources gathered can be see as a way to guess how worthy a currency unit is.
@@ -270,7 +283,9 @@ Example
 #### Renting **spots**
 
 * A player can let other players build facilities in their **spots** for a areed amount of the resource production exploited
-* A player can decide instead to let a user to exploit his resource untilreaching a resource exploited limit in exchange of currency or resources.
+* A player can decide instead to let a user to exploit his resource until reaching a resource gathering limit in exchange of currency or other resources
+* Not producing foreign facilities can be taken by a player. Once a facility is expropriated it can be used inmediately for the expropiatring player, but this act will be publicly available
+
 
 
 ### Food for thought
@@ -283,9 +298,10 @@ Example
 * Does it provide some sort of gamers feedback?
 * How the app can be sustainable? Monetization (Ads, in-game currency, accelration/power-ups, hybrid startegy?)
 * Game lifespan: Every game have a loifespan after a player fulfill its goal the game is over (Ladder top, all buildings finished, all levels cleared, etc). How can we make the game cyclic?
-
+* How players will have fun?
+*
 ```
-resources -> production -> trading -> expending? -> resorces (extra spots/rent?)
+resources -> production -> trading -> spending? -> resorces (extra spots/rent?)
 ```
 
 Once a player has gathered enough wealth he should be able to get more resources to exploit so that there are always new
@@ -293,13 +309,17 @@ Player must have easy and quick access to other players' economic & production i
 **Spots** resource potential should constantly change in a more or less predictible manner so that player can think of an strategy firsthand but no magic formula can be derived. 
 ---
 
-### Vocabulary
+[//]: # (TODO)
+
+### Vocabulary 
 **Resource potential**
 **Spot**
-energetic resource
-facility
-working rate
-consumption rate
+**energetic resource**
+**regular resource**
+**facility**
+**working rate**
+**consumption rate**
+**energy**
 
 [//]: # (TEXTURES)
 
