@@ -256,35 +256,36 @@ Trading is one of the main aspect of the game. Trading takes place between any t
 * Money exchange requires no energy
 * The exchange rate must be agreed by the players performing the transaction
 * Transaction information involving players' currency will be made public so that other player can have some reference of the exchange rate.
+* Player's own and foreign currency are stored in the **treasury**
 
-Players can use their own money to get resources from other players in advance and to save the energy implied when resources are moved from one **spot** to another, but both player should agree first on this and set the exchange rate. Nevertheless, it's wise that players accept their own currency as a legitimate exchange instrument. So, when a player asks another player for some resources giving in exchange the emiting-money player currency this player should accept the offer agreeing the transaction at some exchage rate. This way players currency gain trust. Later, the emiting-money player can use this instrument as a means to get resources in advance as he see fit. There must be a mechanism that can tell other players how trusted a currency is. Foreign currency can be think of as some sort of wealth if this currency is printed by a trusted player (someone who always accept their own currency as payment at a reasonable exchange rate and publish his **treasury** status regularly) because this amount of money represent potential access to other markets and its resources.
+Players can use their own money to get resources from other players in advance and to save the energy implied when resources are moved from one **spot** to another, but both player should agree first on this and set the exchange rate.
 
+Nevertheless, it's wise that players accept their own currency as a legitimate exchange instrument. So, when a player asks another player for some resources giving in exchange the emiting-money player currency this player should accept the offer agreeing the transaction at some exchage rate. This way players currency gain trust. Later, the emiting-money player can use this instrument as a means to get resources in advance as he see fit. There must be a mechanism that can tell other players how trusted a currency is. Foreign currency can be think of as some sort of wealth if this currency is printed by a trusted player (someone who always accept their own currency as payment at a reasonable exchange rate and publish his **treasury** status regularly) because this amount of money represent potential access to other markets and its resources.
 
-* Player's own and foreign currency are stored in the **tresury**
+##### Valuable information
+
 * Gathered resources and other players currency stored in **treasury** can represent player's wealth
 * A player can choose if they want to make public **treasury** information so that other players can have an idea how stable his currency is or made just a partial display of the treasury information.
 * Potential resource access are another source of valuable information
 * Distances between **spots** idem
 * Distribution of resource availability in near located **spots**
 * Amount of money printed vs amount of money accepted
-* Amounto of currency widespread in the market
+* Amount of currency widespread in the market
 * Exchage rates information
 * Amount of transactions done
-* Amount of owned facilities built in other players **spots** (industrial power) idem 
+* Amount of owned facilities built in other players **spots** (industrial power) 
 * Players who excels managing their resources can become their own currency a reference in the market
-
-
-
-* The printed amount of money divided by the resources gathered can be see as a way to guess how worthy a currency unit is.
-* Players can decrease the amount of money the have printed but this money must be in thier **treasury** first
-* Hw much money a player has printed and how much own money a player have accepted information must be publicly available.
+* The printed amount of money divided by the resources gathered can be seen as a way to guess how worthy a currency unit is.
+* Players can decrease the amount of money they have printed but this money must be in their **treasury** first
+* How much money a player has printed and how much own money a player have accepted information must be publicly available.
 * No player can print other player currency
 
 #### Renting **spots**
 
 * A player can let other players build facilities in their **spots** for a areed amount of the resource production exploited
 * A player can decide instead to let a user to exploit his resource until reaching a resource gathering limit in exchange of currency or other resources
-* Not producing foreign facilities can be taken by a player. Once a facility is expropriated it can be used inmediately for the expropiatring player, but this act will be publicly available
+* Not producing foreign facilities can be taken by a player. Once a facility is expropriated it can be used inmediately for the expropriating player, but this act will be publicly known
+* A player can decide to unbuild their facilities in other player **spot** if they are not producing and take their resources back provided the energy required to move the resources.
 
 
 
@@ -299,9 +300,9 @@ Players can use their own money to get resources from other players in advance a
 * How the app can be sustainable? Monetization (Ads, in-game currency, accelration/power-ups, hybrid startegy?)
 * Game lifespan: Every game have a loifespan after a player fulfill its goal the game is over (Ladder top, all buildings finished, all levels cleared, etc). How can we make the game cyclic?
 * How players will have fun?
-*
+
 ```
-resources -> production -> trading -> spending? -> resorces (extra spots/rent?)
+resources -> production -> trading -> spending? -> resources (extra spots/rent?)
 ```
 
 Once a player has gathered enough wealth he should be able to get more resources to exploit so that there are always new
