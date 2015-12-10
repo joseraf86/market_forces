@@ -146,13 +146,13 @@ The player chooses to unbuild his coal-producing facility in order to build a ti
 ##### Timber production 
 
 | minute   | exploited resource | energetic resource | maintenance resource|
-|----------|--------------------|:------------------:|:--------------------:
-|0         |0.5                 |N/A                 |N/A
-|1         |1                   |                    |
-|...       |...                 |                    |
-|57        |29                  |                    |
-|58        |29.5                |                    |
-|59        |30                  |                    |
+|----------|--------------------|:------------------:|:-------------------:|
+|0         |0.5                 |N/A                 |N/A                  |
+|1         |1                   |                    |                     |
+|...       |...                 |                    |                     |
+|57        |29                  |                    |                     |
+|58        |29.5                |                    |                     |
+|59        |30                  |                    |                     |
 
 
 Now the player has 30 timber and 15 coal in his **treasury**.
