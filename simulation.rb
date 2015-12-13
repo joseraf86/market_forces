@@ -1,20 +1,24 @@
 #!/usr/bin/env ruby
 require './core_structures.rb'
+require 'thread'
 
-def production_simulation(treasury)
-  facilities = []	
-  2.times do 
-    facilities << Facility.new(maint: :timber, output: :gold, energy: :coal)
-  end
+semaphore = Mutex.new
+treasury = Treasury.new
 
-  workers = []
-  facilities.each do |w|
-  	workers << Thread.new(treasury){|t| t.add(w.exploit_resource(t.get(10)))}
-  end
-  workers.each(&:join)
+facilities = []	
+5.times do 
+  facilities << Facility.new(maint: :timber, output: :gold, energy: :coal)
 end
 
-t = Treasury.new
-production_simulation(t)
+workers = []
+  facilities.each do |w|
+    workers << Thread.new(treasury) do |t|
+      gotten = nil 
+      semaphore.synchronize{gotten = t.get(100)}
+      exploited_resource = w.exploit_resource(gotten)
+      semaphore.synchronize{t.add(exploited_resource)}
+    end
+end
+workers.each(&:join)
 
-puts t.get_state
+puts treasury.get_state

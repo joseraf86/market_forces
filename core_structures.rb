@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 class Facility
 
   def initialize(**res_types)
@@ -53,7 +54,7 @@ class Treasury
   
   def initialize
   	@resource = 0
-  	@energy = 150
+  	@energy = 1000
   end
 
   def add(income)
@@ -63,6 +64,7 @@ class Treasury
   def get(outcome)
   	if @energy - outcome >= 0 
   	  @energy -= outcome
+      outcome
   	else
   	  0
   	end
