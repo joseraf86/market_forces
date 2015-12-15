@@ -2,12 +2,42 @@
 
 class Facility
 
+  attr_reader :level
+
   def initialize(**res_types)
   	@level = 1
     @res_maint = res_types[:maint]
     @res_energy = res_types[:energy]
     @res_output = res_types[:output]
+    @res_reserve = 0
     set_production_base_rate
+  end
+
+  def add_reserve
+     @res_reserve
+  end
+
+  def upgrade(resource)
+    if enough?(resource)
+      @level += 1
+    end
+  end
+
+  def enough?(resource)
+    puts get_key(resource)
+    puts get_value(resource)
+    puts @res_maint
+    puts next_level?
+    puts 'XXXXXXX'
+    get_key(resource) == @res_maint && get_value(resource) == next_level?
+  end
+
+  def next_level?
+    Utilities.fibonacci(@level + 1) * 10
+  end
+
+  def downgrade
+    @level -= 1 unless @level <= 1
   end
 
   # exploit _resources recieves input units of a given energetic resource
@@ -55,7 +85,6 @@ class Facility
   # 
   def calculate_exploiting_time(input)
   	# Suppose 1 input energy-unit unit gives 1 energy-minute
-    puts input
     input.values.first*Resource.energy_rate(input.keys.first) 
   end
 
@@ -93,6 +122,14 @@ class Facility
     when :uranium
       @p_base_rate = 1
     end
+  end
+
+  def get_key(**hash)
+    hash.keys.first
+  end
+
+  def get_value(**hash)
+    hash.values.first
   end
 end
 
@@ -148,6 +185,8 @@ class Spot
 end
 
 class Resource
+  attr_accessor :type, :quantity
+
   def self.energy_rate(resource)
     case resource
     when :coal
@@ -161,5 +200,11 @@ class Resource
     when :uranium
       1
     end
+  end
+end
+
+class Utilities
+  def self.fibonacci(n)
+    n <= 1 ? n :  fibonacci( n - 1 ) + fibonacci( n - 2 )
   end
 end
