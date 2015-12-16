@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 require './app/core_structures.rb'
 require 'thread'
 
@@ -15,7 +16,8 @@ workers = []
     workers << Thread.new(treasury) do |t|
       gotten = nil 
       semaphore.synchronize{gotten = t.get(coal: 100)}
-      exploited_resource = f.exploit_resource(gotten)
+      r = Resource.new(:coal, 100)
+      exploited_resource = f.exploit_resource(r)
       semaphore.synchronize{t.add(exploited_resource)}
     end
 end
