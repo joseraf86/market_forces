@@ -3,11 +3,16 @@ require './app/core_structures.rb'
 
 f = Facility.new(output: :gold, energy: :coal, maint: :timber)
 r = Resource.new(:timber, 100)
+t = Treasury.new
+
 f.upgrade(r)
-f.upgrade(r)
-f
-e_resource = Resource.new(:coal, 100)
+#f.upgrade(r)
+p t
+p f
+resource = t.get(coal: 100)
+e_resource = Resource.new(resource.keys.first, resource.values.first)
 f.exploit_resource(e_resource)
 f.downgrade(r)
-f.downgrade(r)
-f
+#f.downgrade(r)
+p f
+p t
