@@ -101,8 +101,8 @@ class Facility
 
   def downgrade(resource)
     if @level > 1
-      r = return_upgrade_cost(resource)
       @level -= 1
+      r = return_upgrade_cost(resource)
       set_production_current_level_rate
       return r
     end
