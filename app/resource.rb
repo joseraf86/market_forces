@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 
 class Resource
-  attr_accessor :type, :value
   ENERGY_RATES = {coal: 1, oil: 1, gas: 1, water: 1, uranium: 1}
+
+  attr_reader :type
+  attr_accessor :value
 
   def initialize(type, value)
     @type = type
@@ -10,7 +12,7 @@ class Resource
   end
 
   def consume(value)
-    @value -= value
+    @value -= value unless @value >= 0
   end
 
   def energy_rate
