@@ -42,7 +42,7 @@ class Facility
       puts "Producing #{output_buffer} units"
     end
     # Return what have been stored in ouput_buffer
-    {@res_output => output_buffer}
+    Resource.new(@res_output, output_buffer)
   end
 
   # calculate_exploiting_time calculates how many
@@ -148,62 +148,59 @@ class Facility
       @p_base_rate = 1
     end
   end
-
-  def get_key(**hash)
-    hash.keys.first
-  end
-
-  def get_value(**hash)
-    hash.values.first
-  end
 end
 
 class Treasury
+
+  # Initialize treasury with default resources
   def initialize
-    @resources = {timber: 0,
-                  iron: 0,
-                  gold: 0,
-                  copper: 0,
-                  diamond: 0,
-                  clay: 0,
-                  marble: 0,
-                  coal: 1000,
-                  oil: 0, 
-                  gas: 0, 
-                  water: 0, 
-                  uranium: 0}
+    create_default_resources
   end
 
-  def add(**income)
-    @resources[get_key(income)] += get_value(income)
+  # Add resource to the treasury
+  def add(resource)
+    get_resource(resource.type).value += resource.value
   end
 
-  def get_key(**hash)
-    hash.keys.first
-  end
+  # Get resource from the treasury
+  def get(resource_type, resource_value)
+    # Check if resource if available from treasury
+    if available?(resource_type, resource_value)
+      # Resource is taken from treasury
+      get_resource(resource_type).value -= resource_value
 
-  def get_value(**hash)
-    hash.values.first
-  end
-
-  def get(**outcome)
-    if available?(outcome)
-      key = get_key(outcome)
-      value = get_value(outcome)
-      @resources[key] -= value
-      {key => value}
+      # Return asked resource
+      Resource.new(resource_type, resource_value)
     else
       nil
     end
   end
 
-  def available?(**resource)
-    @resources[get_key(resource)] - get_value(resource) >= 0
+  # Check if resource is available in treasury
+  def available?(resource_type, resource_value)
+    get_resource(resource_type).value  - resource_value >= 0
   end
- 
+
+  # Print in-treasury stored resources
   def get_state
     "Treasury state: #{@resources}"
   end 
+
+  private
+  # Set default treasury resources
+  def create_default_resources
+     resources = [:timber, :iron, :gold, :copper, :diamond, :clay, :marble,
+                  :coal, :oil, :gas, :water, :uranium]
+     @resources = []
+     resources.each do |r|
+       @resources << Resource.new(r, 1000)
+     end
+  end
+
+  # Get a resource from @treasury given resource_type
+  def get_resource(resource_type)
+    (@resources.select{|r| r.type == resource_type}).first
+  end
 end
 
 class Spot
