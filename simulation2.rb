@@ -9,8 +9,8 @@ f.upgrade(r)
 #f.upgrade(r)
 p t
 p f
-resource = t.get(coal: 100)
-e_resource = Resource.new(resource.keys.first, resource.values.first)
+resource = t.get(:coal, 100)
+e_resource = Resource.new(resource.type, resource.values)
 f.exploit_resource(e_resource)
 f.downgrade(r)
 #f.downgrade(r)

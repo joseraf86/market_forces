@@ -15,9 +15,8 @@ workers = []
   facilities.each do |f|
     workers << Thread.new(treasury) do |t|
       gotten = nil 
-      semaphore.synchronize{gotten = t.get(coal: 100)}
-      r = Resource.new(:coal, 100)
-      exploited_resource = f.exploit_resource(r)
+      semaphore.synchronize{gotten = t.get(:coal, 100)}
+      exploited_resource = f.exploit_resource(gotten)
       semaphore.synchronize{t.add(exploited_resource)}
     end
 end
