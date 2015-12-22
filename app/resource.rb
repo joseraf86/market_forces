@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 class Resource
   ENERGY_RATES = {coal: 1, oil: 1, gas: 1, water: 1, uranium: 1}
 
