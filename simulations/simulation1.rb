@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-
-require './app/core_structures.rb'
 require 'thread'
+require File.expand_path("../../app/facility", __FILE__)
+require File.expand_path("../../app/treasury", __FILE__)
 
 semaphore = Mutex.new
 treasury = Treasury.new

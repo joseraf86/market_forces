@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-require './app/core_structures.rb'
+require File.expand_path("../../app/facility", __FILE__)
+require File.expand_path("../../app/treasury", __FILE__)
 
 f = Facility.new(output: :gold, energy: :coal, maint: :timber)
 r = Resource.new(:timber, 100)
