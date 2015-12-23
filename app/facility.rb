@@ -46,7 +46,7 @@ class Facility
         puts "Producing #{output_buffer} units"
       end
       # Return what have been stored in ouput_buffer
-      Resource.new(@res_output, output_buffer)
+      Resource.new(@res_output_type, output_buffer)
     end
   end
 
