@@ -27,7 +27,7 @@ resources -> production -> trading
 ### Production-related constraints:
 
 * Players must build **facilities** in their _spots_
-* Players can build has many facilities if they pay the required costs
+* Players can build as many facilities as they want if they pay the required costs
 * Facilities have an initial cost
 * Players will have enough initial resources to let them build as much facilities as they see fit
 * Facilities will let players exploit their **spot** resources
