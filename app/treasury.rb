@@ -9,7 +9,7 @@ class Treasury
 
   # Add resource to the treasury
   def add(resource)
-    get_resource(resource.type).value += resource.value
+    get_resource(resource.type).add(resource.value)
   end
 
   # Get resource from the treasury
@@ -17,7 +17,7 @@ class Treasury
     # Check if resource if available from treasury
     if available?(resource_type, resource_value)
       # Resource is taken from treasury
-      get_resource(resource_type).value -= resource_value
+      get_resource(resource_type).consume(resource_value)
 
       # Return asked resource
       Resource.new(resource_type, resource_value)
